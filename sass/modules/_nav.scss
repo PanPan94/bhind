@@ -1,0 +1,96 @@
+.nav-container {
+    @include box-shadow(0px 2px 8px 0px rgba(50, 50, 50, 0.18));
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    z-index: 9000!important;
+    .container {
+        @include flex(space-between, center);
+        .nav-logo {
+            transform: translateY(10px);
+            background: url('../img/bhind.svg');
+            background-repeat: no-repeat;
+            width: 100px; height: 100px;
+
+            &-link {
+                display: block;
+                height: 100%;width: 100%;
+            }
+        }
+
+        .nav-nav {
+            width: 35%;
+            transform: translate3d(0, -15px, 0);
+            // transform: translateX(0%);            
+            nav {
+                width: 100%;
+                @include flex(space-around, center);
+                .nav-items {
+                    color: $red;
+                    text-decoration: none;
+                    display: block;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        transition: transform 0.3s ease;
+                        position: absolute;
+                        transform: scaleX(0);
+                        transform-origin: left;                        
+                        width: 100%;
+                        left: 0;
+                        bottom: -10px;
+                        height: 5px;
+                        background-color: $red;
+                    }
+                    &:hover {
+                        &:after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-container {
+        .container {
+            .nav-nav {
+                width: 70%;
+                position: absolute;
+                right: 0;
+                top: 0px;
+                height: 100vh;
+                background-color: lighten($grey, 75);
+                transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+                transform: translateX(100%);
+                nav {
+                    padding-top: 50px;
+                    @include flex-direction(column);
+                    display: block;
+                    text-align: center;
+
+                    .nav-items {
+                        line-height: 3;
+                    }
+                }
+                .nav-toggler {
+                    background: url('../img/menu.svg');
+                    background-repeat: no-repeat;
+                    background-size: 70% 70%;
+                    background-position: 10px 10px;
+                    width: 70px;
+                    height: 70px;
+                    position: absolute;
+                    left: -70px;
+                      
+                      
+                }
+            }
+
+            
+        }
+    }
+}

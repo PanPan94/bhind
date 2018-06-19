@@ -1,0 +1,36 @@
+.page {
+    // background: url('../img/pbg.jpg') no-repeat center;
+    background-image: radial-gradient(circle, #ffffff, #fefdfe, #fdfafd, #fef7fb, #fff4f7);
+    background-attachment: fixed;
+    background-size: cover;
+    
+    @include clearfix;
+    min-height: calc(100vh - 80px);
+    .p--container {
+        @include box-shadow(0px 0px 102px -34px #888888);
+        margin: 100px auto;
+        padding: 25px 25px;
+        width: 70%;
+        background-color: #fff;
+        transition: all 0.3s ease-in;
+        
+        &:hover {
+            @include box-shadow(0px 0px 112px -34px #888888);
+        }
+
+        p {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page {
+        min-height: calc(100vh - 80px);
+        .p--container {
+            width: 95%;
+        }
+    }
+}

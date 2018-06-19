@@ -1,0 +1,47 @@
+
+    .intro-banner-content {
+        padding: 30px 0;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .team {
+            margin: 15px auto;
+            width: 90%;
+            @include display-flex;
+            @include flex-flow(row wrap);
+            @include justify-content(space-between);
+            @include align-items(flex-start);
+            .team-comp {
+                @include display-flex;
+                @include flex-direction(column);
+                margin: 15px auto;
+                text-align: center;
+                width: 250px;
+                height: 250px;
+                
+                img {
+                    width: 210px;
+                    height: 195px;
+                    border-radius: 100%; 
+                    margin: 0 auto;
+                }
+
+                p {
+                    margin: 15px 0;
+                }
+
+                .team-comp-name {
+                    font-weight: 700;
+                }
+                .team-comp-role {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+.team-define {
+    width: 80%;
+    margin: 0 auto 50px auto;
+}

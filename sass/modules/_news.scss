@@ -1,0 +1,149 @@
+.h--news {
+    .h--news-content {
+        @include flex(space-around, center);
+        @include flex-wrap(wrap);
+        .h--news-items {
+            width: 250px; height: 250px;
+            margin: 25px 50px;
+            position: relative;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    background-color: grey;
+                    opacity: 0.2;
+                    transition: all 0.4s;
+                }
+
+                &:hover {
+                    &:after {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .h--news-defense {
+            background: url('../img/dpts/h--defense');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .h--news-courneuve {
+            background: url('../img/dpts/h--courneuve');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .h--news-st-cloud {
+            background: url('../img/dpts/h--st-cloud.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .h--news-disney {
+            background: url('../img/dpts/h--disney.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .h--news-parc-de-sceaux {
+            background: url('../img/dpts/h--parc-de-sceaux.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .h--news-p-regional-haute-vallee-de-chevreuse {
+            background: url('../img/dpts/h--p-regional-haute-vallee-de-chevreuse.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .h--news-chateau-de-versailles {
+            background: url('../img/dpts/h--chateau-de-versaille.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .h--news-cergy {
+            background: url('../img/dpts/h--cergy.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .news-feed {
+        width: 50%;
+    }
+
+    .video {
+        margin-top: 50px;
+        width: 100%;
+        @include display-flex;
+        @include justify-content(space-between);
+        @include align-items(center);
+        video {
+            width: 55%;
+        }
+        .p--container {
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+            @include box-shadow(0px 0px 5px #888888);
+            margin: 100px auto;
+            padding: 25px 25px;
+            width: 70%;
+            background-color: #fff;
+            transition: all 0.3s ease-in;
+            
+            &:hover {
+                @include box-shadow(0px 0px 12px #888888);
+            }
+    
+            p {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .news-feed {
+    width: 90%!important;
+    }
+    .video {
+        margin-top: 50px;
+        width: 100%;
+        @include display-flex;
+        @include flex-direction(column);
+        @include justify-content(flex-start);
+        @include align-items(flex-start);
+        video {
+            width: 100%;
+            margin: 25px auto;
+        }
+        .p--container {
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+            @include box-shadow(0px 0px 5px #888888);
+            margin: 100px auto;
+            padding: 25px 25px;
+            width: 100%;
+            background-color: #fff;
+            transition: all 0.3s ease-in;
+            
+            &:hover {
+                @include box-shadow(0px 0px 12px #888888);
+            }
+    
+            p {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

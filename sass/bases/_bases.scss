@@ -1,0 +1,43 @@
+* {
+    @include box-sizing(border-box);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 400;
+    color: $white;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 300;
+    color: $black;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 60px;
+    font-weight: 400;
+    color: $red;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $grey;
+}
+
+b {
+    color: $red;
+}
+
+hr {
+    color: lighten($grey, 60);
+}
+

@@ -1,0 +1,209 @@
+.map {
+    height: 100vh;
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.infoWindow {
+    padding-top: 35px;
+    width: 30%;
+    max-height: 100vh;
+    
+    ul { 
+        margin-top: 15px;
+        margin-left: 15px;
+        max-height: 450px;
+        overflow: scroll;
+        overflow-x: hidden; }
+    li {
+        display: block;
+        border: solid #e7e7e7 1px;
+        padding: 15px;
+        @include transition(all 0.3s);
+        &:nth-child(1) {
+            @include border-radius(5px);
+        }
+        &:nth-last-child(1) {
+            @include border-radius(0px 5px);
+        }
+    
+        &:hover {
+            @include transform(scale(1.005));
+            background-color: lighten(#e7e7e7, 8);
+        }
+        a {
+            text-decoration: none;
+            color: $grey;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+.page {
+    .map-container {
+        .infoWindow {
+            display: inline-block;
+            width: 30%;
+            overflow: scroll;
+            background-color: #fff;
+            ul li {
+                width: 100%;
+            }
+        }
+    }
+}
+.p--visit {
+
+    .restaurant {
+        .nearby-restaurant {
+            li {
+                display: block;
+                border: solid #e7e7e7 1px;
+                padding: 15px;
+                @include transition(all 0.3s);
+                &:nth-child(1) {
+                    @include border-radius(5px 0px);
+                }
+                &:nth-last-child(1) {
+                    @include border-radius(0px 5px);
+                }
+
+                &:hover {
+                    @include transform(scale(1.005));
+                    background-color: lighten(#e7e7e7, 8);
+                }
+                a {
+                    text-decoration: none;
+                    color: $grey;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                }
+                h3 {
+                    text-decoration: none;
+                    color: $red;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    
+                }
+            }
+        }
+    }
+}
+
+// VISITS
+
+.latest-articles {
+    padding-bottom: 35px;
+    li {
+        display: block;
+        border: solid #e7e7e7 1px;
+        padding: 15px;
+        @include transition(all 0.3s);
+        &:nth-child(1) {
+            @include border-radius(5px);
+        }
+        &:nth-last-child(1) {
+            @include border-radius(0px 5px);
+        }
+    
+        &:hover {
+            @include transform(scale(1.005));
+            background-color: lighten(#e7e7e7, 8);
+        }
+        a {
+            text-decoration: none;
+            color: $grey;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+// PROPOSITION
+
+.v-proposition {
+    margin: 50px 0;
+    h3 {
+        font-size: 36px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &-card {
+        @include flex(center, center);
+        @include flex-wrap(wrap);
+        padding-top: 50px;
+        .card-pic {
+            width: 50%;
+            max-width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .card-desc {
+            width: 50%;
+            min-width: 500px;
+            max-width: 90%;
+            height: 100%;
+            padding: 50px;
+            
+            h2 {
+                color: $red;
+                margin-bottom: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+.v-proposition-container {
+    margin: 50px 0;
+    @include flex(center);
+    @include flex-wrap(wrap);
+    @include clearfix;
+    .v-sproposition-card {
+        width: 50%;
+        min-width: 550px;
+        @include flex(center, center);
+        .card-pic {
+            width: 48%;
+            img {
+                min-height: 200px;
+                min-width: 200px;
+                width: 100%;
+            }
+        }
+        .card-desc {
+            @include flex(center, center);
+            @include flex-direction(column);
+            padding: 50px;
+            min-width: 400px;
+
+            h2 {
+                a {
+                    text-decoration: none;
+                    color: #c83032;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .v-sproposition-card {
+        @include flex-direction(column);
+    }
+}

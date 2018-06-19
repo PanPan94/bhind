@@ -1,0 +1,19 @@
+.h--header {
+    height: 80vh;
+    background: url('../img/home-bg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flex(center,center);
+    @include clearfix;
+
+    .h--header-caption {
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align-last: right;
+            color: $white;
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.h--departments {
+    .btn {
+        border: 2px solid $red;
+        color: $red;
+        &:hover {
+            color: $white;
+        }
+        &.is-active {
+            color: #fff;
+            background-color: $red;
+            box-shadow: 0 0px 30px rgba($red, 0.7);
+            cursor: pointer;
+            transform: translateY(-5px);
+        }
+    }
+    
+    .region {
+        cursor: pointer;
+        transition: fill 0.3s;
+        & path:hover {
+            fill: #c83032;
+        }
+    }
+    
+    
+    .svg-map {
+        width: 40%;
+        margin: 50px auto;
+    }
+    
+    .region-links {
+        margin: 0 auto;
+        width: 90%;
+        @include display-flex;
+        @include flex(space-around, center);
+        @include flex-wrap(wrap);
+        .region-link {
+            margin: 25px 15px;
+            text-align-last: center;
+            width: 280px;
+        }
+    }
+}
